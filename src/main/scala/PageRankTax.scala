@@ -24,7 +24,7 @@ object PageRankTax {
 
     val count = lines.count()
     var ranks = links.mapValues(v => 1.0 / count)
-    for (i <- 1 to 1) {
+    for (i <- 1 to 25) {
       val tempRank = links.join(ranks).values.flatMap {
         case (urls, rank) =>
           val outgoingLinks = urls.split(" ")
