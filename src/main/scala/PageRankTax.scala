@@ -1,6 +1,6 @@
 import org.apache.spark.sql.SparkSession
 
-object PageRank {
+object PageRankTax {
 
   def main(args: Array[String]): Unit = {
 
@@ -24,13 +24,17 @@ object PageRank {
 
     val count = lines.count()
     var ranks = links.mapValues(v => 1.0 / count)
-    for (i <- 1 to 25) {
+    for (i <- 1 to 1) {
       val tempRank = links.join(ranks).values.flatMap {
         case (urls, rank) =>
           val outgoingLinks = urls.split(" ")
           outgoingLinks.map(url => (url, rank / outgoingLinks.length))
       }
       ranks = tempRank.reduceByKey(_ + _)
+
+      // taxation
+      ranks = ranks.map(x=>(x._1, (x._2 * 0.85) + (0.15 / count)))
+    
     }
 
 
