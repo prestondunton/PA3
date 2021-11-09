@@ -40,7 +40,7 @@ object PageRank {
 
      // sort by page rank decreasing
     ranks = ranks.sortBy(_._2, false)
-    titleRank.sortBy(_._2,false)
+    titleRank = titleRank.sortBy(_._2,false)
 
     // save outputs
     ranks.saveAsTextFile(args(2))
