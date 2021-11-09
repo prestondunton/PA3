@@ -1,4 +1,5 @@
-[0m[[0m[31merror[0m] [0m[0m/s/bach/g/under/pdunton/CS435/PA3/src/main/scala/WordCount.scala:16:9: sc is already defined as value sc[0m
-[0m[[0m[31merror[0m] [0m[0m    val sc = SparkSession.builder().master("yarn").getOrCreate().sparkContext[0m
-[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/s/bach/g/under/pdunton/CS435/PA3/src/main/scala/PageRank.scala:43:15: reassignment to val[0m
+[0m[[0m[31merror[0m] [0m[0mError occurred in an application involving default arguments.[0m
+[0m[[0m[31merror[0m] [0m[0m    titleRank = titleRank.sortBy(_._2,false)[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m

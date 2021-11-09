@@ -36,7 +36,7 @@ object PageRank {
     }
     
     val titleIndexRank = titles.map(x=>(x._1.toString,x._2))
-    val titleRank = (titleIndexRank.join(ranks)).values
+    var titleRank = (titleIndexRank.join(ranks)).values
 
      // sort by page rank decreasing
     ranks = ranks.sortBy(_._2, false)
