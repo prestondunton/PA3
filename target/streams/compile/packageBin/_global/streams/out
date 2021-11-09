@@ -1,1 +1,7 @@
-[0m[[0m[0mdebug[0m] [0m[0mJar uptodate: /s/bach/g/under/pdunton/CS435/PA3/target/scala-2.12/pagerankscala_2.12-0.1.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0mPackaging /s/bach/g/under/pdunton/CS435/PA3/target/scala-2.12/pagerankscala_2.12-0.1.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PageRank.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /s/bach/g/under/pdunton/CS435/PA3/target/scala-2.12/classes/PageRank.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PageRank$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /s/bach/g/under/pdunton/CS435/PA3/target/scala-2.12/classes/PageRank$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m
