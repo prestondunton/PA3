@@ -28,3 +28,9 @@ Make sure you add ```export PATH=$PATH:/usr/local/sbt/latest/bin``` to your ```~
 Also add a new variable ```export SPARK_MASTER_ADDRESS=spark://<master>:<port>``` where the master node and port are from the ```SPARK_MASTER_IP``` and ```SPARK_MASTER_PORT``` properties in your ```spark-env.sh``` file
 
 This variable allows us to use the ```recompile_and_run.sh``` file I've create without editing it for our different master nodes.
+
+## Recompile and Run Script	
+
+Usage: ```bash recompile_and_run.sh <PageRank|PageRankTax|WikiBomb> <cluster|client> <linksInput> <titleInput>```
+
+Example: ```bash recompile_and_run.sh WikiBomb client /PA3/input/links.txt /PA3/input/titles.txt```

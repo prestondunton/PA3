@@ -17,6 +17,7 @@ object WikiBomb {
 
     // Get index of 'rocky mountain national park'
     val rITemp = surfRockyTitles.filter(x=>(x._2.toLowerCase.equals("rocky_mountain_national_park"))).keys
+  
     val rIArray = rITemp.take(1)
     val rockyIndexNum = rIArray(0)
 
@@ -26,6 +27,8 @@ object WikiBomb {
 
     // Final surfing links
     val fin = surfRockyIndex.join(surfRockyLinks).values
-    fin.saveAsTextFile(args(2))
+    val formattedLinks = fin.map(x=>(x._1 + ": " + x._2))
+    formattedLinks.saveAsTextFile(args(2))
+
   }
 }
