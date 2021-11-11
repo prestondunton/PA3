@@ -47,9 +47,14 @@ object PageRankTax {
     ranks = ranks.sortBy(_._2, false)
     titleRank = titleRank.sortBy(_._2,false)
 
+    // Output only top 10 Page Ranks
+    val indexTitleRank = titleRank.zipWithIndex().mapValues(x => x + 1).map(_.swap)
+    val top10Temp = indexTitleRank.filter(x=>x._1 < 11)
+    val top10 = top10Temp.map(x=>(x._2))
+
     // save outputs
     ranks.saveAsTextFile(args(2))
     titles.saveAsTextFile(args(3))
-    titleRank.saveAsTextFile(args(4))
+    top10.saveAsTextFile(args(4))
   }
 }
